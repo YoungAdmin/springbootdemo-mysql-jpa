@@ -1,0 +1,26 @@
+spring:
+  #JPA配置
+  jpa:
+    database: mysql
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+
+  #数据库连接配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.107.105.158:3306/vptvdb?characterEncoding=utf-8&useSSL=false
+    username: zhangsan
+    password: Zhangsan2018!
+
+
+#测试时tomcat的端口，发布时记得注释或删除
+server:
+  port: 9091
+logging:
+  level:
+    com.vptv: debug
